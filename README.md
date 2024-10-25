@@ -1,4 +1,4 @@
-##Calculator Project
+## Calculator Project
 
 ### Gaëtan Rousselin
 ### Antonin Gillet fusion
