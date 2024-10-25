@@ -1,5 +1,5 @@
-#Calculator Project
+##Calculator Project
 
-## Gaëtan Rousselin
-## Antonin Gillet fusion
-## Nathan Demoineret
+### Gaëtan Rousselin
+### Antonin Gillet fusion
+### Nathan Demoineret
