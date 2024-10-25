@@ -23,7 +23,7 @@ public interface RomanConverterServiceAsync {
     void convertRomanToArabe(String nbr, AsyncCallback<Integer> callback);
 
     /**
-     *AsyncCallback to convert arab number to roman number
+     * AsyncCallback to convert arab number to roman number
      * 
      * @param nbr
      * @return

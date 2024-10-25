@@ -29,6 +29,16 @@
   
   <!-- Add your servlet -->
   
+  <servlet>
+    <servlet-name>DiscountService</servlet-name>
+    <servlet-class>org.insset.server.DiscountServiceImpl</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DiscountService</servlet-name>
+    <url-pattern>/calculatorInsset/discount</url-pattern>
+  </servlet-mapping>
+
   <!-- Default page to serve -->
   <welcome-file-list>
     <welcome-file>calculatorInsset.html</welcome-file>
