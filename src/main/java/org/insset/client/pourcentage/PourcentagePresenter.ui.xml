@@ -1,0 +1,54 @@
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+         xmlns:g='urn:import:com.google.gwt.user.client.ui'
+        xmlns:menu="urn:import:org.insset.client.menu">
+
+<g:HTMLPanel>
+    <menu:Menu ui:field="menu"/>
+    <h1>Projet de mise en pratique Scrum</h1>       
+    <div class="bs-section">
+        <g:FlowPanel>
+            <g:FlowPanel>
+                <g:Label>Entrer un prix</g:Label>
+            </g:FlowPanel>
+            <g:FlowPanel>          
+              <g:TextBox ui:field="valPrice" text="Entrer un prix"/>
+            </g:FlowPanel>
+            <g:FlowPanel>
+                <g:Label ui:field="errorLabelP" ></g:Label>
+            </g:FlowPanel>
+            <g:FlowPanel>
+                <g:ResetButton ui:field="buttonClearP" text="Clear"/>
+            </g:FlowPanel>
+        </g:FlowPanel>
+        <g:FlowPanel>
+        </g:FlowPanel>
+        <g:FlowPanel>
+            <g:FlowPanel>
+                <g:Label>Entrer un pourcentage de remise</g:Label>
+            </g:FlowPanel>
+            <g:FlowPanel>          
+              <g:TextBox ui:field="valDiscount" text="Entrer une remise" />
+            </g:FlowPanel>
+            <g:FlowPanel>
+                <g:Label ui:field="errorLabelD" ></g:Label>
+            </g:FlowPanel>
+            <g:FlowPanel >
+                <g:ResetButton ui:field="buttonClearD" text="Clear"/>
+            </g:FlowPanel>
+        </g:FlowPanel>
+        <g:FlowPanel>
+        </g:FlowPanel>
+        <g:FlowPanel>
+            <g:FlowPanel>
+                <g:Label ui:field="errorLabelC" ></g:Label>
+            </g:FlowPanel>
+            <g:FlowPanel>          
+              <g:SubmitButton ui:field="buttonConvert" text="Convertir"/>
+            </g:FlowPanel>
+        </g:FlowPanel>
+      <!--</g:Form>-->
+    </div>
+    <!-- E. Container Right -->
+
+  </g:HTMLPanel>
+</ui:UiBinder>
