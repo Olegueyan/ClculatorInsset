@@ -1,4 +1,6 @@
 package org.insset.shared;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * <p>
@@ -51,18 +53,25 @@ public class FieldVerifier {
      * @param name the name to validate
      * @return true if valid, false if invalid
      */
+    // Function verify if a number is decimal
     public static boolean isValidDecimal(Integer nbr) {
         //Implement your code
         return true;
     }
 
+    // Function verify if a number is roman
     public static boolean isValidRoman(String nbr) {
-        //Implement your code
-        return true;
+        if (nbr == null || nbr.isEmpty()) {
+            return false;
+        }
+
+        // Regex expression that verify if the input number is a roman number
+        String romanRegex = "^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$";
+        return nbr.matches(romanRegex);
     }
 
+    // Function verify if a date is valide
     public static boolean isValidDate(String date) {
-        //Implement your code
         return true;
     }
 }
