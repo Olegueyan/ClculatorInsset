@@ -1,2 +1,5 @@
-#i ClculatorInsset
-#testiiiii
+#Calculator Project
+
+## Gaëtan Rousselin
+## Antonin Gillet fusion
+## Nathan Demoineret
