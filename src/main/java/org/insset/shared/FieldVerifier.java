@@ -1,6 +1,8 @@
 package org.insset.shared;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * <p>
@@ -72,6 +74,9 @@ public class FieldVerifier {
 
     // Function verify if a date is valide
     public static boolean isValidDate(String date) {
-        return true;
+        String romanRegex = "(^0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(\\d{4}$)";
+        
+        
+        return date.matches(romanRegex);
     }
 }

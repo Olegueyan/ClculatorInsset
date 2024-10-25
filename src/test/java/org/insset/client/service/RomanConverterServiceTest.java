@@ -77,7 +77,21 @@ public class RomanConverterServiceTest {
      */
     @Test
     public void testConvertDateYears() {
-
+        String[] testBattery = new String[] { "10/10/1000", "25/10/2024", "31/12/2999"};
+        
+        String[] expResult = new String[] { "X/X/M", "XXV/X/MMXXIV", "XXXI/XII/MMCMXCIX"};
+        
+        String[] result = new String[3];
+        
+        for (int i = 0; i < testBattery.length; i++)
+        {
+            result[i] = this.converterService.convertDateYears(testBattery[i]);
+        }
+        
+        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(expResult));
+        
+        assertArrayEquals(expResult, result);
     }
     
 }

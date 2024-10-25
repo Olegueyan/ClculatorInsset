@@ -181,8 +181,8 @@ public class CalculatorRomainPresenter extends Composite {
     private void convertDate() {
         //Verif
         if (!FieldVerifier.isValidDate(valD.getText())) {
-            errorLabelAToR.addStyleName("serverResponseLabelError");
-            errorLabelAToR.setText("Format incorect");
+            errorLabelD.addStyleName("serverResponseLabelError");
+            errorLabelD.setText("Format incorect (The date must be in the 'dd/mm/yyyy' format)");
             return;
         }
         //call server
