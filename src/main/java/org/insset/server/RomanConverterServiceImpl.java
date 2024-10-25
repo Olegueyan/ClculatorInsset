@@ -37,7 +37,7 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
         
         // Define Roman numerals symbols and their corresponding values.
         int[] values = new int[]{ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
-        String[] symbols = new String[]{ "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "I" };
+        String[] symbols = new String[]{ "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
         
         StringBuilder romanNumeral = new StringBuilder();
         
@@ -46,12 +46,12 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
         {
             while (nbr >= values[i])
             {
+                romanNumeral.append(symbols[i]);
                 nbr -= values[i];
-                result += symbols[i];
             }
         }
         
-        return result;
+        return romanNumeral.toString();
     }
 
 }

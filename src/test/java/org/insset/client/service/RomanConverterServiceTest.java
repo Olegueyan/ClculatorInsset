@@ -5,6 +5,9 @@
  */
 package org.insset.client.service;
 
+import java.util.Arrays;
+import java.util.LinkedList;
+import org.insset.server.RomanConverterServiceImpl;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -18,7 +21,10 @@ import static org.junit.Assert.*;
  */
 public class RomanConverterServiceTest {
     
+    private RomanConverterServiceImpl converterService;
+    
     public RomanConverterServiceTest() {
+        this.converterService = new RomanConverterServiceImpl();
     }
     
     @BeforeClass
@@ -42,14 +48,7 @@ public class RomanConverterServiceTest {
      */
     @Test
     public void testConvertRomanToArabe() {
-        System.out.println("convertRomanToArabe");
-        String nbr = "";
-        RomanConverterService instance = new RomanConverterServiceImpl();
-        Integer expResult = null;
-        Integer result = instance.convertRomanToArabe(nbr);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
     }
 
     /**
@@ -57,18 +56,20 @@ public class RomanConverterServiceTest {
      */
     @Test
     public void testConvertArabeToRoman() {
-        System.out.println("convertArabeToRoman");
+        int[] testBattery = new int[] { 1, 78, 945, 234, 1345, 28 };
+        String[] expResult = new String[] { "I", "LXXVIII", "CMXLV", "CCXXXIV", "MCCCXLV", "XXVIII"};
         
-        int[] testBattery = new int[] { 4, 7, 12, 23, 54, 102, 203, 1289};
-        String[] expResults = new String[] { "IV", "VII", "XXIII", "e" };
+        String[] result = new String[6];
         
-        Integer nbr = null;
-        RomanConverterService instance = new RomanConverterServiceImpl();
-        String expResult = "";
-        String result = instance.convertArabeToRoman(nbr);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        for (int i = 0; i < testBattery.length; i++)
+        {
+            result[i] = this.converterService.convertArabeToRoman(testBattery[i]);
+        }
+        
+        System.out.println(Arrays.toString(result));
+        System.out.println(Arrays.toString(expResult));
+        
+        assertArrayEquals(expResult, result);
     }
 
     /**
@@ -76,29 +77,7 @@ public class RomanConverterServiceTest {
      */
     @Test
     public void testConvertDateYears() {
-        System.out.println("convertDateYears");
-        String nbr = "";
-        RomanConverterService instance = new RomanConverterServiceImpl();
-        String expResult = "";
-        String result = instance.convertDateYears(nbr);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
 
-    public class RomanConverterServiceImpl implements RomanConverterService {
-
-        public Integer convertRomanToArabe(String nbr) throws IllegalArgumentException {
-            return null;
-        }
-
-        public String convertArabeToRoman(Integer nbr) throws IllegalArgumentException {
-            return "";
-        }
-
-        public String convertDateYears(String nbr) throws IllegalArgumentException {
-            return "";
-        }
     }
     
 }
