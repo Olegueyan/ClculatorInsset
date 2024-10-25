@@ -21,8 +21,13 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
     
     @Override
     public String convertDateYears(String nbr) throws IllegalArgumentException {
-        //Implement your code
-        return "XV/III/MX";
+        
+        String day = convertArabeToRoman(Integer.parseInt(nbr.substring(0, 2)));
+        String month = convertArabeToRoman(Integer.parseInt(nbr.substring(3, 5)));
+        String year = convertArabeToRoman(Integer.parseInt(nbr.substring(6, 10)));
+            
+        return day + "/" + month + "/" + year;
+        
     }
 
     @Override
