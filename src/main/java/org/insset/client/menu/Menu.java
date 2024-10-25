@@ -74,7 +74,7 @@ public class Menu extends Composite {
 
             @Override
             public void execute() {
-
+                GWT.log("Divide method called with dividende: ");
                 History.newItem("divide", true);
             }
         });

@@ -60,6 +60,7 @@ public class CalculatorDividePresenter extends Composite {
      * Init des handler
      */
     private void initHandler() {
+        GWT.log("Divide method called with dividende: ");
         boutonClear.addClickHandler(new ClickHandler() {
             @Override
             public void onClick(ClickEvent event) {
@@ -92,7 +93,7 @@ public class CalculatorDividePresenter extends Composite {
         }
         catch (IllegalArgumentException e)
         {
-            errorLabel.getElement().getStyle().setColor("red");
+            errorLabel.addStyleName("serverResponseLabelError");
             errorLabel.setText(e.getMessage());
             //errorLabel.setText("Impossible d'effectuer la division, vérifiez le diviseur et le dividende!");
         }

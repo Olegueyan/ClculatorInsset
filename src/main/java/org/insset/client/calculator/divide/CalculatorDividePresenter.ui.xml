@@ -21,7 +21,6 @@
                 <g:Label ui:field="errorLabel" ></g:Label>
             </g:FlowPanel>
             <g:FlowPanel >
-                
                 <g:ResetButton ui:field="boutonClear" text="Clear"/>
             </g:FlowPanel>
         </g:FlowPanel>

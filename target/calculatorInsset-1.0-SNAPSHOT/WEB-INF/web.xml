@@ -16,6 +16,15 @@
     <url-pattern>/calculatorInsset/exemple</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>divideTwoInt</servlet-name>
+    <servlet-class>org.insset.server.DivideServiceImpl</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>divideTwoInt</servlet-name>
+    <url-pattern>/calculatorInsset/divide</url-pattern>
+  </servlet-mapping>
 
   <servlet>
     <servlet-name>romanConvert</servlet-name>

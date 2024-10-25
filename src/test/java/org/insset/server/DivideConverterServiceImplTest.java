@@ -51,6 +51,10 @@ public class DivideConverterServiceImplTest {
         assertEquals(expResult, result);
     }
     
+    /**
+     * Test of divide method, of class DivideConverterServiceImpl.
+     */
+    //@Test
     public void testDivideFail() {
         System.out.println("divide");
         Integer valDividende = 2;
