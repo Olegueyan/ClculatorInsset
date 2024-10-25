@@ -22,6 +22,13 @@ public interface RomanConverterServiceAsync {
      */
     void convertRomanToArabe(String nbr, AsyncCallback<Integer> callback);
 
+    /**
+     *AsyncCallback to convert arab number to roman number
+     * 
+     * @param nbr
+     * @return
+     * @throws IllegalArgumentException 
+     */
     void convertArabeToRoman(Integer nbr, AsyncCallback<String> callback);
 
     void convertDateYears(String nbr, AsyncCallback<String> callback);
