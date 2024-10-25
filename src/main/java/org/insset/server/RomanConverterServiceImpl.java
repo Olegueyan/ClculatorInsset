@@ -30,8 +30,28 @@ public class RomanConverterServiceImpl extends RemoteServiceServlet implements
 
     @Override
     public String convertArabeToRoman(Integer nbr) throws IllegalArgumentException {
-        //Implement your code
-        return new String("XVXX");
+        // Ensure number is within supproted range.
+        if (nbr <= 0 || nbr > 3000) {
+            throw new IllegalArgumentException("Input number musdt be between 0 and 3000.");
+        }
+        
+        // Define Roman numerals symbols and their corresponding values.
+        int[] values = new int[]{ 1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};
+        String[] symbols = new String[]{ "M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I" };
+        
+        StringBuilder romanNumeral = new StringBuilder();
+        
+        // Convert the integer to Roman numeral by iteratinh over symbol-value pa
+        for (int i = 0; i < values.length; i++)
+        {
+            while (nbr >= values[i])
+            {
+                romanNumeral.append(symbols[i]);
+                nbr -= values[i];
+            }
+        }
+        
+        return romanNumeral.toString();
     }
 
 }

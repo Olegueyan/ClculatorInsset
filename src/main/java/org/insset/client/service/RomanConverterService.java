@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -24,6 +25,13 @@ public interface RomanConverterService extends RemoteService {
      */
     Integer convertRomanToArabe(String nbr) throws IllegalArgumentException;
 
+    /**
+     * Convert arab number to roman number
+     * 
+     * @param nbr
+     * @return
+     * @throws IllegalArgumentException 
+     */
     String convertArabeToRoman(Integer nbr) throws IllegalArgumentException;
 
     String convertDateYears(String nbr) throws IllegalArgumentException;
