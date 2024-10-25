@@ -51,5 +51,14 @@ public class DivideConverterServiceImplTest {
         assertEquals(expResult, result);
     }
     
-    
+    public void testDivideFail() {
+        System.out.println("divide");
+        Integer valDividende = 2;
+        Integer valDiviseur = 0;
+        DivideConverterServiceImpl instance = new DivideConverterServiceImpl();
+        Integer expResult = null;
+        Integer result = instance.divide(valDividende, valDiviseur);
+        assertNotEquals(expResult, result);
+    }
 }
+

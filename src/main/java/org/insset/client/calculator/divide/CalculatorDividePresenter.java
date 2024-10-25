@@ -5,7 +5,6 @@ import com.google.gwt.event.dom.client.ClickEvent;
 import com.google.gwt.event.dom.client.ClickHandler;
 import com.google.gwt.uibinder.client.UiBinder;
 import com.google.gwt.uibinder.client.UiField;
-import com.google.gwt.user.client.rpc.AsyncCallback;
 import com.google.gwt.user.client.ui.Composite;
 import com.google.gwt.user.client.ui.HTMLPanel;
 import com.google.gwt.user.client.ui.Label;
@@ -82,8 +81,7 @@ public class CalculatorDividePresenter extends Composite {
     private void divide() {
         int dividende = Integer.parseInt(valDividende.getText());
         int diviseur = Integer.parseInt(valDiviseur.getText());
-   
-        try
+   try
         {
             int result = service.divide(dividende, diviseur);
             errorLabel.setText("");
@@ -98,5 +96,6 @@ public class CalculatorDividePresenter extends Composite {
             errorLabel.setText(e.getMessage());
             //errorLabel.setText("Impossible d'effectuer la division, vérifiez le diviseur et le dividende!");
         }
+        
     }
 }
