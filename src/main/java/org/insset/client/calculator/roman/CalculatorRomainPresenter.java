@@ -135,8 +135,13 @@ public class CalculatorRomainPresenter extends Composite {
             }
 
             public void onSuccess(Integer result) {
-                errorLabelRToA.setText(" ");
-                new DialogBoxInssetPresenter("Convertion Roman to arabe", valR.getText(), String.valueOf(result));
+                if (result > 3000){
+                    new DialogBoxInssetPresenter("Convertion Roman to arabe", valR.getText(), "Impossible : résultat supérieur à 3000");
+                } else{
+                    errorLabelRToA.setText(" ");
+                    new DialogBoxInssetPresenter("Convertion Roman to arabe", valR.getText(), String.valueOf(result));
+                }
+                
             }
         });
     }
