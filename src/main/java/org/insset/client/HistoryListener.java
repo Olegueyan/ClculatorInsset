@@ -10,6 +10,7 @@ import com.google.gwt.event.logical.shared.ValueChangeHandler;
 import com.google.gwt.user.client.ui.RootPanel;
 import org.insset.client.exemple.ExemplePresenter;
 import org.insset.client.calculator.roman.CalculatorRomainPresenter;
+import org.insset.client.calculator.divide.CalculatorDividePresenter;
 
 /**
  *
@@ -24,6 +25,12 @@ public class HistoryListener implements ValueChangeHandler<String> {
         if (event.getValue().equals("roman")) {
             RootPanel.get().clear();
             RootPanel.get().add(new CalculatorRomainPresenter());
+        }
+        
+        //Accès a la page de conversion divide
+        if (event.getValue().equals("divide")) {
+            RootPanel.get().clear();
+            RootPanel.get().add(new CalculatorDividePresenter());
         }
 
         //Accès a la page d'exemple
